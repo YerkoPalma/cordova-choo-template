@@ -1,3 +1,5 @@
 node_modules
 template_src/platforms
 template_src/plugins
+template_src/www/*
+!template_src/www/index.html
