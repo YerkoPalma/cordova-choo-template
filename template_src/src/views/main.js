@@ -28,5 +28,4 @@ function view (state, emit) {
       </main>
     </body>
   `
-
 }

@@ -1,4 +1,5 @@
 node_modules
+*.log
 template_src/platforms
 template_src/plugins
 template_src/www/*
