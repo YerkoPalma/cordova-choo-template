@@ -10,7 +10,7 @@ function view (state, emit) {
   return html`
     <body class="code lh-copy w-100 vh-100 dt">
       <main class="pa3 cf bg-washed-red vh-100 dtc v-mid tc">
-        <div class="bg-washed-blue shadow-1 center pa3 br3 w5 h5"></div>
+        <div id="touche" class="bg-washed-blue shadow-1 center pa3 br3 w5 h5"></div>
       </main>
     </body>
   `
