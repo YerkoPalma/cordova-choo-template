@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "cp src/sw.js src/manifest.json www && cp -r src/assets www && browserify -p tinyify -t sheetify src/index.js > www/bundle.js",
-    "start": "cordova run browser --port=8080",
+    "start": "cp src/sw.js src/manifest.json www && cp -r src/assets www && browserify -t sheetify src/index.js > www/bundle.js && cordova run browser --port=8080",
     "test": "standard 'src/**/*.js' && npm run test-deps",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons"
   },
@@ -29,7 +29,8 @@
     "choo-touch": "^0.1.0",
     "dependency-check": "^3.1.0",
     "standard": "^11.0.1",
-    "tinyify": "^2.4.1"
+    "tinyify": "^2.4.1",
+    "watchify": "^3.11.0"
   },
   "cordova": {
     "platforms": [
