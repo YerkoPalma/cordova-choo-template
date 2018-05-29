@@ -8,23 +8,9 @@ function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
 
   return html`
-    <body class="code lh-copy">
-      <main class="pa3 cf center">
-        <section class="fl mw6 w-50-m w-third-l pa3 center">
-          <h2>1.</h2>
-          <p>
-            Welcome to your new Choo application.
-            We're very happy you've made it this far.
-          </p>
-
-          <p>
-            You're now in control of your own Choo app. The moment you decide to
-            deploy it, it'll work offline and on any device.
-          </p>
-
-          <br>
-        </section>
-
+    <body class="code lh-copy w-100 vh-100 dt">
+      <main class="pa3 cf bg-washed-red vh-100 dtc v-mid tc">
+        <div class="bg-washed-blue shadow-1 center pa3 br3 w5 h5"></div>
       </main>
     </body>
   `
