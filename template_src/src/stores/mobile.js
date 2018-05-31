@@ -3,7 +3,7 @@ var toast = require('native-toast')
 module.exports = store
 
 function store (state, emitter) {
-  state.totalClicks = 0
+  window.origin = {}
 
   emitter.on('deviceready', function () {
     toast({
@@ -11,5 +11,25 @@ function store (state, emitter) {
       position: 'top',
       square: true
     })
+    var el = document.querySelector('#touche')
+    var body = document.body
+    window.origin.x = Math.round((body.offsetWidth - el.offsetWidth) / 2)
+    window.origin.y = Math.round((body.offsetHeight - el.offsetHeight) / 2)
+    window.transform = { 
+      translate: { x: window.origin.x, y: window.origin.y },
+      scale: 1,
+      angle: 0,
+      rx: 0,
+      ry: 0,
+      rz: 0
+    }
+    var value = [
+      'translate(' + window.transform.translate.x + 'px, ' + window.transform.translate.y + 'px)'
+    ]
+
+    value = value.join(' ')
+    el.style.webkitTransform = value
+    el.style.mozTransform = value
+    el.style.transform = value
   })
 }
