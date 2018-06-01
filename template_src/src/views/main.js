@@ -18,6 +18,7 @@ function view (state, emit) {
           data-recognize="pan" 
           data-panstart="drag" 
           data-panmove="drag" 
+          data-panend="reset"
           class="${animate} bg-washed-blue shadow-1 center pa3 br3 w4 h4 absolute"></div>
       </main>
     </body>
