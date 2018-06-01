@@ -33,6 +33,18 @@ app.use(require('choo-touch')('#touche', {
       })
       window.ticking = true
     }
+  },
+  toggle: function (event) {
+    if (!window.ticking) {
+      requestAnimationFrame(function () {
+        var el = document.querySelector('#touche')
+
+        el.classList.toggle('br3')
+        el.classList.toggle('br-100')
+        window.ticking = false
+      })
+      window.ticking = true
+    }
   }
 }))
 app.use(require('./stores/mobile'))

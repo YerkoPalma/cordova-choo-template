@@ -15,10 +15,11 @@ function view (state, emit) {
       <main class="pa3 cf bg-washed-red vh-100">
         <div 
           id="touche" 
-          data-recognize="pan" 
+          data-recognize="pan tap" 
           data-panstart="drag" 
           data-panmove="drag" 
           data-panend="reset"
+          data-tap="toggle"
           class="${animate} bg-washed-blue shadow-1 center pa3 br3 w4 h4 absolute"></div>
       </main>
     </body>
